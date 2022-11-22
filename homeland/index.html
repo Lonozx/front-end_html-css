@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeland</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+
+        }
+
+        .page-wrapper {
+            overflow: hidden;
+        }
+
+        .header__text {
+            max-width: 380px;
+            margin: 16px 0 24px;
+        }
+
+        .header {
+            position: relative;
+            display: flex;
+            background: black;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .header__planet {
+            position: absolute;
+            bottom: -90px;
+            right: -110px;
+            width: 850px;
+            /* height: 768px;   */
+            animation: planet 6s infinite;
+            
+        }
+
+        .header__cursor {
+            position: absolute;
+            bottom: 235px;
+            right: 200px;
+            width: 150px;
+            animation: cursor 4s infinite;
+        }
+        .header__doodle-1:hover{
+            animation: doodle 1s infinite;
+        }
+        .header__doodle-2{
+            animation: doodle 1s infinite;
+        }
+        .header__doodle-3{
+            animation: doodle 1s infinite;
+        }
+       
+        .doodle-img{
+
+            width: 224px;
+            height: 224px;
+        }
+        .header__button{
+            border: transparent;
+            background: blue;
+            width: 300px;
+            height: 100px;
+        }
+        .header__button:hover{
+            animation: button 1s infinite;
+        }
+
+        @keyframes planet {
+            0% {
+                transform: translate(0)
+            }
+
+            50% {
+                transform: translate(10px, -10px);
+            }
+            100%{
+                transform: translate(0)
+            }
+        }
+        @keyframes cursor {
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 150px;
+            }
+            100%{
+                width: 200px;
+            }
+        }
+        @keyframes doodle {
+            0%{
+                transform: rotate(10deg);
+            }
+            50%{
+                transform: rotate(90deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+     
+
+        @keyframes button {
+            0%{
+                background-color: blue;
+            }
+            50%{
+                color: white;
+                background-color: red;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="container header__container">
+                <h1 class="header__title">Lorem, ipsum</h1>
+                <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, ad! Lorem
+                    ipsum dolor sit amet
+                    consectetur adipisicing elit. Minima, laudantium.</p>
+                <button class="header__button">start</button>
+                <img class="header__planet" src="./img/planet.png" alt="Planet Image">
+                <img class="header__cursor" src="./img/cursor.png" alt="Cursor Image">
+                <img class="header__doodle-1 doodle-img" src="./img/doodle-4 3.png" alt="">
+                <img class="header__doodle-2 doodle-img" src="./img/doodle-5 5.png" alt="">
+                <img class="header__doodle-3 doodle-img" src="./img/doodle-5 6.png" alt="">
+            </div>
+        </header>
+    </div>
+</body>
+
+</html>
